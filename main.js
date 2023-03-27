@@ -102,24 +102,37 @@ if (emailInput) {
 const select = document.querySelector("#cartes");
 const imageCarte = document.querySelector("#imageCarte");
 
-
-fetch("https://api.magicthegathering.io/v1/cards")
+fetch(`https://api.scryfall.com/cards/search?order=cmc&q=c%3Ared+mv%3D3`)
     .then(response => response.json())
-    .then(data => {
-  
-        data.cards.forEach(card => {
-            const option = document.createElement("option");
-            option.text = card.name;
-            option.value = card.imageUrl;
-            select.add(option);
+ .then(data => {
+      const select = document.querySelector("#cartes"); 
+      console.log(data)
+        data.data.forEach((cards) => {
+          const option = document.createElement("option");
+          option.innerHTML = cards.name;
+          option.value = cards.image_uris.png;
+          select.appendChild(option);
+        })
         });
-    })
-    .catch(error => console.error(error));
+// fetch("https://api.magicthegathering.io/v1/cards")
+//     .then(response => response.json())
+//     .then(data => {
+  
+//         data.cards.forEach(card => {
+//             const option = document.createElement("option");
+//             option.text = card.name;
+//             option.value = card.imageUrl;
+//             select.add(option);
+//         });
+//     })
+//     .catch(error => console.error(error));
 
 
 select.addEventListener("change", event => {
     const imageUrl = event.target.value;
     imageCarte.src = imageUrl;
+    imageCarte.style.width = '300px';
+    imageCarte.style.height = '400px';
 });
 
 //page2---------------------------------------------------------------------------------------------------------------------------------------------------------
