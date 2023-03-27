@@ -494,7 +494,7 @@ button.lien {
     background: radial-gradient(circle, rgba(37, 111, 145, 0.3) 0%, rgba(1, 36, 56, 0.3)65%);
     animation-name: fade;
     animation-duration: 5s;
-    animation-delay: 1s;
+    animation-delay: 0.6s;
     visibility: hidden;
     animation-fill-mode: forwards;
 
@@ -506,7 +506,7 @@ button.lien {
     background: radial-gradient(circle, rgba(114, 37, 145, 0.3) 0%, rgba(31, 0, 56, 0.3)65%);
     animation-name: fade;
     animation-duration: 5s;
-    animation-delay: 2s;
+    animation-delay:1.2s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
@@ -517,7 +517,7 @@ button.lien {
     background: radial-gradient(circle, rgba(145, 37, 37, 0.3) 0%, rgba(46, 0, 0, 0.3)65%);
     animation-name: fade;
     animation-duration: 5s;
-    animation-delay: 3s;
+    animation-delay: 1.8s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
@@ -528,7 +528,7 @@ button.lien {
     background: radial-gradient(circle, rgba(37, 145, 51, 0.3) 0%, rgba(9, 46, 0, 0.3)65%);
     animation-name: push;
     animation-duration: 5s;
-    animation-delay: 4s;
+    animation-delay: 2.4s;
     visibility: hidden;
     animation-fill-mode: forwards;
 }
