@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(images/choice.jpg);
+  font-family: chela one, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*--------------------NAV---------------------*/
+nav {
+  background-color: rgb(163, 163, 163, 0.5);
+  height: 10vh;
+
+}
+
+
+.nav-link {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px black;
+
+
+}
+
+a.nav-link:hover {
+  color: rgb(21, 133, 153);
+}
+
+.circle {
+  margin: 0 20px 0 20px;
+}
+
+ul {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0;
+
+}
+
+section {
+  width: 60%;
+  height: 50vh;
+  position: absolute;
+  top: 40%;
+  left: 32%;
+
+
+}
+
+label {
+  width: 50%;
+  font-size: 2em;
+  color: white;
+}
+
+.selection {
+  padding-left: 29%;
+}
+
+.imagecontent {
+  position: absolute;
+  left: 27%;
+}
+
+#imagecarte {
+  left: 30%;
+}
+
+#tableBody {
+  width: 100%;
+}
+
+tr,
+td {
+  padding: 10px;
+  font-size: 25px;
+  color: white;
+  border: 1.5mm ridge rgb(39, 39, 39);
+  text-align: center;
+  min-width: fit-content;
+
+}
+
+img#img {
+  width: 200px;
+
+
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  min-height: 8vh;
+  background-color: rgb(90, 90, 90, 0.5);
+  bottom: 0;
+  color: rgb(194, 194, 194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.copyright {
+  align-self: center;
+  bottom: 0;
+}
+
+ul.social-icons {
+  width: 25%;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+ul.social-icons li {
+  margin-top: 10px;
+  list-style: none;
+}
+
+
+
+
+ul.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+
+}
+
+ul.social-icons i {
+  font-size: 24px;
+}
+
+@media (max-width:1000px) {
+
+  tr,
+  td {
+    font-size: 1em
+  }
+}
+
+@media (max-width:800px) {
+
+  tr,
+  td {
+    font-size: 0.8em
+  }
+
+  img#img {
+    width: 100px;
+  }
+}
