@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: chela one, sans-serif;
+  font-family: boogaloo, sans-serif;
   width: 100%;
   height: 100vh;
   background: url(images/embleme.jpg);
@@ -25,6 +25,7 @@ nav {
 .nav-link {
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 2px black;
+  font-size: 0.8em
 }
 
 a.nav-link:hover {
