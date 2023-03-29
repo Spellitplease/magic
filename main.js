@@ -101,19 +101,56 @@ if (emailInput) {
 
 const select = document.querySelector("#cartes");
 const imageCarte = document.querySelector("#imageCarte");
+let color = 'white';
+let number = 0
 
-fetch(`https://api.scryfall.com/cards/search?order=cmc&q=c%3Ared+mv%3D3`)
+// Mettre à jour la requête fetch avec la variable "color"
+function getCards() {
+  fetch(`https://api.scryfall.com/cards/search?order=cmc&q=c%3A${color}+mv%3D${number}`)
     .then(response => response.json())
- .then(data => {
-      const select = document.querySelector("#cartes"); 
+    .then(data => {
+      const select = document.querySelector("#cartes");
       console.log(data)
-        data.data.forEach((cards) => {
-          const option = document.createElement("option");
-          option.innerHTML = cards.name;
-          option.value = cards.image_uris.png;
-          select.appendChild(option);
-        })
-        });
+      data.data.forEach((cards) => {
+        const option = document.createElement("option");
+        option.innerHTML = cards.name;
+        option.value = cards.image_uris.png;
+        select.appendChild(option);
+      })
+    });
+};
+
+// Surveiller les changements de sélection de l'utilisateur
+const numberSelect = document.querySelector("#nbrSelect");
+numberSelect.addEventListener("change", event => {
+  // Récupérer la valeur de l'option sélectionnée
+  number = event.target.value;
+  // Effacer les cartes existantes
+  select.innerHTML = "";
+  // Mettre à jour les cartes avec la nouvelle couleur
+  getCards();
+});
+// Surveiller les changements de sélection de l'utilisateur
+const colorSelect = document.querySelector("#colorSelect");
+colorSelect.addEventListener("change", event => {
+  // Récupérer la valeur de l'option sélectionnée
+  color = event.target.value.toLowerCase();
+  // Effacer les cartes existantes
+  select.innerHTML = "";
+  // Mettre à jour les cartes avec la nouvelle couleur
+  getCards();
+});
+
+// Appeler getCards pour la première fois au chargement de la page
+getCards();
+
+// Afficher l'image de la carte sélectionnée par l'utilisateur
+select.addEventListener("change", event => {
+  const imageUrl = event.target.value;
+  imageCarte.src = imageUrl;
+  imageCarte.style.width = "300px";
+  imageCarte.style.height = "400px";
+});
 // fetch("https://api.magicthegathering.io/v1/cards")
 //     .then(response => response.json())
 //     .then(data => {
@@ -126,14 +163,6 @@ fetch(`https://api.scryfall.com/cards/search?order=cmc&q=c%3Ared+mv%3D3`)
 //         });
 //     })
 //     .catch(error => console.error(error));
-
-
-select.addEventListener("change", event => {
-    const imageUrl = event.target.value;
-    imageCarte.src = imageUrl;
-    imageCarte.style.width = '300px';
-    imageCarte.style.height = '400px';
-});
 
 //page2---------------------------------------------------------------------------------------------------------------------------------------------------------
 
