@@ -24,7 +24,7 @@ nav {
 .nav-link {
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 2px black;
-  font-size: 0.8em ;
+  font-size: 1em;
 
 
 }
@@ -56,15 +56,16 @@ section {
 
 }
 
-label {
+.invit{
   width: 50%;
   font-size: 2em;
   color: white;
 }
-
-.selection {
-  padding-left: 29%;
+.menu{
+  display:inline-block;
+  
 }
+  
 
 .imagecontent {
   position: absolute;
@@ -75,20 +76,7 @@ label {
   left: 30%;
 }
 
-#tableBody {
-  width: 100%;
-}
 
-tr,
-td {
-  padding: 10px;
-  font-size: 25px;
-  color: white;
-  border: 1.5mm ridge rgb(39, 39, 39);
-  text-align: center;
-  min-width: fit-content;
-
-}
 
 img#img {
   width: 200px;
@@ -112,8 +100,9 @@ footer {
 }
 
 .copyright {
+  margin-bottom: 0;
   align-self: center;
-  bottom: 0;
+  
 }
 
 ul.social-icons {

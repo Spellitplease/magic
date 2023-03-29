@@ -42,22 +42,18 @@
   </header>
   <section class="choix">
     <div class="texte">
-      <label for="cartes">Choisissez une carte mais choisissez bien!</label>
+      <p class="invit">Choisissez une carte mais choisissez bien!</p>
     </div>
-    <div class="selection">
-      <select id="cartes"></select>
-    </div>
-    <div class="imagecontent">
-      <img id="imageCarte" src="">
-    </div>
-    <select name="Color Selector" id="colorSelect">
+    <select  class="menu" name="Color Selector" id="colorSelect" place holder="choisissez la couleur">
+      <option>Choisissez la couleur</option>
       <option data-color="white" value="White">White</option>
       <option data-color="blue" value="Blue">Blue</option>
       <option data-color="black" value="Black">Black</option>
       <option data-color="red" value="Red">Red</option>
       <option data-color="green" value="Green">Green</option>
     </select>
-    <select name="Number Selector" id="nbrSelect">
+    <select class="menu" name="Number Selector" id="nbrSelect">
+      <option>Choisissez le coût en mana</option>
       <option data-number="0" value="0">0</option>
       <option data-number="1" value="1">1</option>
       <option data-number="2" value="2">2</option>
@@ -69,14 +65,16 @@
       <option data-number="8" value="8">8</option>
       <option data-number="9" value="9">9</option>
       <option data-number="10" value="10">10</option>
-      
     </select>
+    <div class="menu selection">
+      <select id="cartes"></select>
+    </div>
+    <div class="imagecontent">
+      <img id="imageCarte" src="">
+    </div>
+    
   </section>
 
-  <table id="tableBody">
-
-
-  </table>
   <footer>
     <ul class="social-icons">
       <ul>

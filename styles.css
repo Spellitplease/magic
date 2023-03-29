@@ -364,7 +364,7 @@ ul.social-icons i {
     }
 }
 @media (max-width: 800px){
-    .logo {
+    /*.logo {
         visibility: hidden;
         position: absolute;
         width: 35vw;
@@ -390,7 +390,7 @@ ul.social-icons i {
     
     
     
-    }
+    }*/
     
     
 
